@@ -9,10 +9,8 @@ export const StateContext = ({ children }) => {
 	const [totalPrice, setTotalPrice] = useState(0);
 	const [totalQuantities, setTotalQuantities] = useState(0);
 	const [qty, setQty] = useState(1);
-
 	let index;
 	let foundProduct;
-
 	const onAdd = (product, quantity) => {
 		const checkProductCart = cartItems.find(item => item._id === product._id);
 		setTotalPrice(prevPrice => prevPrice + product.price * quantity);
